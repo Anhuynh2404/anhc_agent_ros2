@@ -1,0 +1,917 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".devcontainer/devcontainer.json",
+      "language": "json",
+      "sizeLines": 48,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".devcontainer/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 40,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".devcontainer/repos_to_submodules.py",
+      "language": "python",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".env",
+      "language": "config",
+      "sizeLines": 1,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".gitmodules",
+      "language": "unknown",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 377,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/anhc_agent_description/CMakeLists.txt",
+      "language": "txt",
+      "sizeLines": 34,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/anhc_agent_description/launch/agent_description.launch.py",
+      "language": "python",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/back_rim.stl",
+      "language": "stl",
+      "sizeLines": 5376,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/back_sonar.stl",
+      "language": "stl",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/center_hubcap.stl",
+      "language": "stl",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/center_wheel.stl",
+      "language": "stl",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/chassis.stl",
+      "language": "stl",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/Coordinates",
+      "language": "unknown",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/front_rim.stl",
+      "language": "stl",
+      "sizeLines": 5842,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/front_sonar.stl",
+      "language": "stl",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/hokuyo.dae",
+      "language": "dae",
+      "sizeLines": 252,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/left_hubcap.stl",
+      "language": "stl",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/left_wheel.stl",
+      "language": "stl",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/right_hubcap.stl",
+      "language": "stl",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/right_wheel.stl",
+      "language": "stl",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/swivel.stl",
+      "language": "stl",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/meshes/top.stl",
+      "language": "stl",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/models/kinect/meshes/kinect.dae",
+      "language": "dae",
+      "sizeLines": 174,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/models/kinect/model-1_2.sdf",
+      "language": "sdf",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/models/kinect/model-1_3.sdf",
+      "language": "sdf",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/models/kinect/model-1_4.sdf",
+      "language": "sdf",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/models/kinect/model.config",
+      "language": "config",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/models/kinect/model.sdf",
+      "language": "sdf",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/package.xml",
+      "language": "xml",
+      "sizeLines": 22,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/camera/camera.xacro",
+      "language": "xacro",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/camera/cameraD.xacro",
+      "language": "xacro",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/laser/hokuyo_gpu.xacro",
+      "language": "xacro",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/laser/hokuyo.xacro",
+      "language": "xacro",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/materials.xacro",
+      "language": "xacro",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/battery_block.xacro",
+      "language": "xacro",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/inertia_tensors.xacro",
+      "language": "xacro",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/pioneer3dx_body.xacro",
+      "language": "xacro",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/pioneer3dx_chassis.xacro",
+      "language": "xacro",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/pioneer3dx_plugins.xacro",
+      "language": "xacro",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/pioneer3dx_sonar.xacro",
+      "language": "xacro",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/pioneer3dx_swivel.xacro",
+      "language": "xacro",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/pioneer3dx_wheel_left.xacro",
+      "language": "xacro",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/pioneer3dx_wheel.xacro",
+      "language": "xacro",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_description/urdf/p3dx/pioneer3dx.urdf.xacro",
+      "language": "xacro",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/CMakeLists.txt",
+      "language": "txt",
+      "sizeLines": 46,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/config/config.rviz",
+      "language": "rviz",
+      "sizeLines": 430,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/config/pedsim_training_env.xml",
+      "language": "xml",
+      "sizeLines": 114,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/config/slam.yaml",
+      "language": "yaml",
+      "sizeLines": 74,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/launch/gazebo_world.launch.py",
+      "language": "python",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/launch/rviz.launch.py",
+      "language": "python",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/launch/simulation.launch.py",
+      "language": "python",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/launch/slam.launch.py",
+      "language": "python",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/launch/spawn_agent.launch.py",
+      "language": "python",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/launch/training_env_dynamic.launch.py",
+      "language": "python",
+      "sizeLines": 245,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/launch/training_env.launch.py",
+      "language": "python",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/FemaleActor/meshes/FemaleVisitorWalk.dae",
+      "language": "dae",
+      "sizeLines": 1570,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/FemaleActor/model.config",
+      "language": "config",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/FemaleActor/model.sdf",
+      "language": "sdf",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/MaleActor/meshes/MaleVisitorWalk.dae",
+      "language": "dae",
+      "sizeLines": 1015,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/MaleActor/model.config",
+      "language": "config",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/MaleActor/model.sdf",
+      "language": "sdf",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/obstacle/model.config",
+      "language": "config",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/obstacle/model.sdf",
+      "language": "sdf",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/td7_world/model.config",
+      "language": "config",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/td7_world/model.sdf",
+      "language": "sdf",
+      "sizeLines": 239,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/training_env/meshes/training_env.mtl",
+      "language": "mtl",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/training_env/meshes/training_env.obj",
+      "language": "obj",
+      "sizeLines": 2351,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/training_env/model.config",
+      "language": "config",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/training_env/model.sdf",
+      "language": "sdf",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/training_env/training_env.mtl",
+      "language": "mtl",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/models/training_env/training_env.obj",
+      "language": "obj",
+      "sizeLines": 2351,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/package.xml",
+      "language": "xml",
+      "sizeLines": 33,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/scripts/pedsim_gz_bridge.py",
+      "language": "python",
+      "sizeLines": 171,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/worlds/td7_dynamic.world",
+      "language": "world",
+      "sizeLines": 363,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/worlds/td7_empty.world",
+      "language": "world",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/worlds/td7_static.world",
+      "language": "world",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_gazebo/worlds/training_env.world",
+      "language": "world",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/action/StartDrlSession.action",
+      "language": "action",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/CMakeLists.txt",
+      "language": "txt",
+      "sizeLines": 37,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/msg/.gitkeep",
+      "language": "unknown",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/package.xml",
+      "language": "xml",
+      "sizeLines": 25,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/srv/GetDimensions.srv",
+      "language": "srv",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/srv/GetStartGoalPairs.srv",
+      "language": "srv",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/srv/GetTestEpisodes.srv",
+      "language": "srv",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/srv/Reset.srv",
+      "language": "srv",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/srv/SampleActionSpace.srv",
+      "language": "srv",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/srv/Seed.srv",
+      "language": "srv",
+      "sizeLines": 2,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent_interfaces/srv/Step.srv",
+      "language": "srv",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/anhcape_architecture_viz.ipynb",
+      "language": "ipynb",
+      "sizeLines": 361,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/anhcape_architecture.py",
+      "language": "python",
+      "sizeLines": 217,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/CMakeLists.txt",
+      "language": "txt",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/anhc_agent/config/environment.yaml",
+      "language": "yaml",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent/config/hyperparameters.yaml",
+      "language": "yaml",
+      "sizeLines": 39,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent/config/test_config.yaml",
+      "language": "yaml",
+      "sizeLines": 33,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent/config/train_config.yaml",
+      "language": "yaml",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent/evaluation_notebook.ipynb",
+      "language": "ipynb",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/launch/test_anhcape.launch.py",
+      "language": "python",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/package.xml",
+      "language": "xml",
+      "sizeLines": 25,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/anhc_agent/scripts/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/environment/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/environment/environment_interface.py",
+      "language": "python",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/environment/environment.py",
+      "language": "python",
+      "sizeLines": 666,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/policy/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/policy/anhcape_agent.py",
+      "language": "python",
+      "sizeLines": 523,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/policy/test_anhcape_agent.py",
+      "language": "python",
+      "sizeLines": 237,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/policy/train_anhcape_agent.py",
+      "language": "python",
+      "sizeLines": 394,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/utils/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/utils/buffer.py",
+      "language": "python",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/utils/file_manager.py",
+      "language": "python",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/utils/plot_metrics.py",
+      "language": "python",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/utils/plot_reward.py",
+      "language": "python",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/utils/plot_trajectories_on_map.py",
+      "language": "python",
+      "sizeLines": 258,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/anhc_agent/scripts/utils/point_cloud2.py",
+      "language": "python",
+      "sizeLines": 230,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/bitbucket-pipelines.yml",
+      "language": "yaml",
+      "sizeLines": 52,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/velodyne_simulator/gazebo_upgrade.md",
+      "language": "markdown",
+      "sizeLines": 14,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/velodyne_simulator/README.md",
+      "language": "markdown",
+      "sizeLines": 50,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/CHANGELOG.rst",
+      "language": "markdown",
+      "sizeLines": 47,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/CMakeLists.txt",
+      "language": "txt",
+      "sizeLines": 26,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/launch/example-launch.py",
+      "language": "python",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/HDL32E_base.dae",
+      "language": "dae",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/HDL32E_base.stl",
+      "language": "stl",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/HDL32E_scan.dae",
+      "language": "dae",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/HDL32E_scan.stl",
+      "language": "stl",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/VLP16_base_1.dae",
+      "language": "dae",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/VLP16_base_1.stl",
+      "language": "stl",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/VLP16_base_2.dae",
+      "language": "dae",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/VLP16_base_2.stl",
+      "language": "stl",
+      "sizeLines": 235,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/VLP16_scan.dae",
+      "language": "dae",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/meshes/VLP16_scan.stl",
+      "language": "stl",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/package.xml",
+      "language": "xml",
+      "sizeLines": 25,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/rviz/example.rviz",
+      "language": "rviz",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/urdf/example.urdf.xacro",
+      "language": "xacro",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/urdf/HDL-32E.urdf.xacro",
+      "language": "xacro",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/urdf/VLP-16.urdf.xacro",
+      "language": "xacro",
+      "sizeLines": 143,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/urdf/VLP-32C.urdf.xacro",
+      "language": "xacro",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_description/world/example.world",
+      "language": "world",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_gazebo_plugins/CHANGELOG.rst",
+      "language": "markdown",
+      "sizeLines": 54,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_gazebo_plugins/CMakeLists.txt",
+      "language": "txt",
+      "sizeLines": 49,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_gazebo_plugins/include/velodyne_gazebo_plugins/GazeboRosVelodyneLaser.h",
+      "language": "c",
+      "sizeLines": 162,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_gazebo_plugins/package.xml",
+      "language": "xml",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_gazebo_plugins/src/GazeboRosVelodyneLaser.cpp",
+      "language": "cpp",
+      "sizeLines": 451,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_simulator/CHANGELOG.rst",
+      "language": "markdown",
+      "sizeLines": 31,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_simulator/CMakeLists.txt",
+      "language": "txt",
+      "sizeLines": 11,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/velodyne_simulator/velodyne_simulator/package.xml",
+      "language": "xml",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    }
+  ],
+  "totalFiles": 146,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "moderate",
+  "stats": {
+    "filesScanned": 146,
+    "byCategory": {
+      "config": 16,
+      "infra": 1,
+      "code": 116,
+      "docs": 13
+    },
+    "byLanguage": {
+      "json": 1,
+      "dockerfile": 1,
+      "python": 28,
+      "config": 7,
+      "unknown": 4,
+      "markdown": 6,
+      "txt": 7,
+      "stl": 18,
+      "dae": 9,
+      "sdf": 9,
+      "xml": 8,
+      "xacro": 19,
+      "rviz": 2,
+      "yaml": 6,
+      "mtl": 2,
+      "obj": 2,
+      "world": 5,
+      "action": 1,
+      "srv": 7,
+      "ipynb": 2,
+      "c": 1,
+      "cpp": 1
+    }
+  }
+}

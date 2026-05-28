@@ -1,0 +1,1839 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "anhc_agent",
+    "languages": [
+      "python",
+      "yaml"
+    ],
+    "frameworks": [
+      "ROS 2"
+    ],
+    "description": "ANHCAPE: An Huynh Custom Adaptive Policy with Embedding — DRL navigation agent",
+    "analyzedAt": "2026-05-28T04:03:24.609Z",
+    "gitCommitHash": "unknown"
+  },
+  "nodes": [
+    {
+      "id": "file:scripts/policy/anhcape_agent.py",
+      "type": "file",
+      "name": "anhcape_agent.py",
+      "filePath": "scripts/policy/anhcape_agent.py",
+      "summary": "Core implementation of the Anhcape reinforcement learning agent policy and environment.",
+      "tags": [
+        "reinforcement-learning",
+        "agent",
+        "policy",
+        "model",
+        "tested"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/policy/anhcape_agent.py:AvgL1Norm",
+      "type": "function",
+      "name": "AvgL1Norm",
+      "summary": "Function `AvgL1Norm` implementing logic in `anhcape_agent.py`.",
+      "tags": [
+        "function",
+        "logic"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        18,
+        19
+      ]
+    },
+    {
+      "id": "function:scripts/policy/anhcape_agent.py:LAP_huber",
+      "type": "function",
+      "name": "LAP_huber",
+      "summary": "Function `LAP_huber` implementing logic in `anhcape_agent.py`.",
+      "tags": [
+        "function",
+        "logic"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        22,
+        23
+      ]
+    },
+    {
+      "id": "class:scripts/policy/anhcape_agent.py:AnhcapeActor",
+      "type": "class",
+      "name": "AnhcapeActor",
+      "summary": "Class `AnhcapeActor` defining state and behavior in `anhcape_agent.py`.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        26,
+        42
+      ]
+    },
+    {
+      "id": "class:scripts/policy/anhcape_agent.py:AnhcapeEncoder",
+      "type": "class",
+      "name": "AnhcapeEncoder",
+      "summary": "Class `AnhcapeEncoder` defining state and behavior in `anhcape_agent.py`.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        45,
+        71
+      ]
+    },
+    {
+      "id": "class:scripts/policy/anhcape_agent.py:AnhcapeCritic",
+      "type": "class",
+      "name": "AnhcapeCritic",
+      "summary": "Class `AnhcapeCritic` defining state and behavior in `anhcape_agent.py`.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        74,
+        105
+      ]
+    },
+    {
+      "id": "class:scripts/policy/anhcape_agent.py:AnhcapeAgent",
+      "type": "class",
+      "name": "AnhcapeAgent",
+      "summary": "Class `AnhcapeAgent` defining state and behavior in `anhcape_agent.py`.",
+      "tags": [
+        "class",
+        "agent"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        108,
+        523
+      ]
+    },
+    {
+      "id": "file:scripts/policy/test_anhcape_agent.py",
+      "type": "file",
+      "name": "test_anhcape_agent.py",
+      "filePath": "scripts/policy/test_anhcape_agent.py",
+      "summary": "Test suite for the Anhcape reinforcement learning agent.",
+      "tags": [
+        "test",
+        "reinforcement-learning",
+        "policy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/policy/test_anhcape_agent.py:main",
+      "type": "function",
+      "name": "main",
+      "summary": "Main entry point for `test_anhcape_agent.py`.",
+      "tags": [
+        "function",
+        "logic",
+        "entry-point"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        218,
+        233
+      ]
+    },
+    {
+      "id": "class:scripts/policy/test_anhcape_agent.py:TestAnhcape",
+      "type": "class",
+      "name": "TestAnhcape",
+      "summary": "Class `TestAnhcape` defining state and behavior in `test_anhcape_agent.py`.",
+      "tags": [
+        "class",
+        "test-case"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        20,
+        215
+      ]
+    },
+    {
+      "id": "file:scripts/policy/train_anhcape_agent.py",
+      "type": "file",
+      "name": "train_anhcape_agent.py",
+      "filePath": "scripts/policy/train_anhcape_agent.py",
+      "summary": "Training script and ROS2 node for optimizing the Anhcape reinforcement learning agent.",
+      "tags": [
+        "entry-point",
+        "training",
+        "ros2",
+        "reinforcement-learning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/policy/train_anhcape_agent.py:main",
+      "type": "function",
+      "name": "main",
+      "summary": "Main entry point for `train_anhcape_agent.py`.",
+      "tags": [
+        "function",
+        "logic",
+        "entry-point"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        375,
+        390
+      ]
+    },
+    {
+      "id": "class:scripts/policy/train_anhcape_agent.py:TrainAnhcape",
+      "type": "class",
+      "name": "TrainAnhcape",
+      "summary": "Class `TrainAnhcape` defining state and behavior in `train_anhcape_agent.py`.",
+      "tags": [
+        "class"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        28,
+        372
+      ]
+    },
+    {
+      "id": "file:scripts/utils/file_manager.py",
+      "type": "file",
+      "name": "file_manager.py",
+      "filePath": "scripts/utils/file_manager.py",
+      "summary": "Utility module providing helper functions for reading and writing JSON and YAML files.",
+      "tags": [
+        "utility",
+        "serialization",
+        "file-io"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/utils/file_manager.py:save_json",
+      "type": "function",
+      "name": "save_json",
+      "summary": "Saves a dictionary as a JSON file.",
+      "tags": [
+        "utility",
+        "json",
+        "serialization"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        6,
+        9
+      ]
+    },
+    {
+      "id": "function:scripts/utils/file_manager.py:load_json",
+      "type": "function",
+      "name": "load_json",
+      "summary": "Loads a dictionary from a JSON file.",
+      "tags": [
+        "utility",
+        "json",
+        "deserialization"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        12,
+        16
+      ]
+    },
+    {
+      "id": "function:scripts/utils/file_manager.py:save_yaml",
+      "type": "function",
+      "name": "save_yaml",
+      "summary": "Saves a dictionary as a YAML file.",
+      "tags": [
+        "utility",
+        "yaml",
+        "serialization"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        19,
+        22
+      ]
+    },
+    {
+      "id": "function:scripts/utils/file_manager.py:load_yaml",
+      "type": "function",
+      "name": "load_yaml",
+      "summary": "Loads a dictionary from a YAML file.",
+      "tags": [
+        "utility",
+        "yaml",
+        "deserialization"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        25,
+        33
+      ]
+    },
+    {
+      "id": "file:scripts/utils/plot_metrics.py",
+      "type": "file",
+      "name": "plot_metrics.py",
+      "filePath": "scripts/utils/plot_metrics.py",
+      "summary": "Script for plotting metric data using matplotlib.",
+      "tags": [
+        "visualization",
+        "metrics",
+        "script",
+        "utility"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/utils/plot_metrics.py:parse_args",
+      "type": "function",
+      "name": "parse_args",
+      "summary": "Parses command line arguments for the plot metrics script.",
+      "tags": [
+        "argument-parsing",
+        "utility"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        12,
+        20
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_metrics.py:plot_metrics",
+      "type": "function",
+      "name": "plot_metrics",
+      "summary": "Plots the provided metrics from a YAML file.",
+      "tags": [
+        "visualization",
+        "plotting",
+        "metrics"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        23,
+        86
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_metrics.py:main",
+      "type": "function",
+      "name": "main",
+      "summary": "Main entry point for the plot metrics script.",
+      "tags": [
+        "entry-point",
+        "script"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        89,
+        94
+      ]
+    },
+    {
+      "id": "file:scripts/utils/plot_trajectories_on_map.py",
+      "type": "file",
+      "name": "plot_trajectories_on_map.py",
+      "filePath": "scripts/utils/plot_trajectories_on_map.py",
+      "summary": "Main script for visualizing robot trajectories and metrics overlaid on map images.",
+      "tags": [
+        "entry-point",
+        "visualization",
+        "mapping",
+        "script"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:scripts/utils/plot_trajectories_on_map.py:MapMetaData",
+      "type": "class",
+      "name": "MapMetaData",
+      "summary": "Data class representing metadata for a map image.",
+      "tags": [
+        "data-model",
+        "mapping"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        14,
+        17
+      ]
+    },
+    {
+      "id": "class:scripts/utils/plot_trajectories_on_map.py:Trajectory",
+      "type": "class",
+      "name": "Trajectory",
+      "summary": "Data class representing a robot trajectory.",
+      "tags": [
+        "data-model",
+        "trajectory"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        20,
+        27
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_trajectories_on_map.py:transform_coordinates",
+      "type": "function",
+      "name": "transform_coordinates",
+      "summary": "Transforms trajectory coordinates to map pixel coordinates.",
+      "tags": [
+        "utility",
+        "math",
+        "mapping"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        29,
+        39
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_trajectories_on_map.py:load_image_and_metadata",
+      "type": "function",
+      "name": "load_image_and_metadata",
+      "summary": "Loads a map image and its associated YAML metadata.",
+      "tags": [
+        "file-io",
+        "mapping"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        42,
+        59
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_trajectories_on_map.py:load_trajectories",
+      "type": "function",
+      "name": "load_trajectories",
+      "summary": "Loads and transforms trajectory data from JSON/YAML files.",
+      "tags": [
+        "file-io",
+        "trajectory",
+        "data-processing"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        62,
+        105
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_trajectories_on_map.py:load_metrics",
+      "type": "function",
+      "name": "load_metrics",
+      "summary": "Loads metric data from a YAML file.",
+      "tags": [
+        "file-io",
+        "metrics"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        108,
+        116
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_trajectories_on_map.py:display_metrics",
+      "type": "function",
+      "name": "display_metrics",
+      "summary": "Displays textual metrics over the plotted map.",
+      "tags": [
+        "visualization",
+        "metrics"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        119,
+        140
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_trajectories_on_map.py:plot_trajectory",
+      "type": "function",
+      "name": "plot_trajectory",
+      "summary": "Plots the raw and smoothed trajectories onto a map axis.",
+      "tags": [
+        "visualization",
+        "plotting",
+        "trajectory"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        143,
+        164
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "type": "function",
+      "name": "plot_comparison",
+      "summary": "Coordinates loading and plotting of trajectories across multiple experiments for comparison.",
+      "tags": [
+        "visualization",
+        "plotting",
+        "coordination"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        167,
+        224
+      ]
+    },
+    {
+      "id": "function:scripts/utils/plot_trajectories_on_map.py:main",
+      "type": "function",
+      "name": "main",
+      "summary": "Main entry point for executing trajectory comparison plotting.",
+      "tags": [
+        "entry-point",
+        "script"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        227,
+        254
+      ]
+    },
+    {
+      "id": "config:config/environment.yaml",
+      "type": "config",
+      "name": "environment.yaml",
+      "filePath": "config/environment.yaml",
+      "summary": "Configuration file specifying environmental settings and threshold parameters for the agent.",
+      "tags": [
+        "configuration",
+        "environment",
+        "parameters"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:config/hyperparameters.yaml",
+      "type": "config",
+      "name": "hyperparameters.yaml",
+      "filePath": "config/hyperparameters.yaml",
+      "summary": "Configuration file defining the machine learning model hyperparameters.",
+      "tags": [
+        "configuration",
+        "hyperparameters",
+        "tuning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:config/test_config.yaml",
+      "type": "config",
+      "name": "test_config.yaml",
+      "filePath": "config/test_config.yaml",
+      "summary": "Test configuration specifying evaluation settings and start-goal pairs.",
+      "tags": [
+        "configuration",
+        "test",
+        "evaluation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:config/train_config.yaml",
+      "type": "config",
+      "name": "train_config.yaml",
+      "filePath": "config/train_config.yaml",
+      "summary": "Configuration file setting up training parameters and environments.",
+      "tags": [
+        "configuration",
+        "train",
+        "learning"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/.understandignore",
+      "type": "config",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Configuration file specifying paths and patterns to ignore during project analysis.",
+      "tags": [
+        "configuration",
+        "ignore-list"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:anhcape_architecture_viz.ipynb",
+      "type": "file",
+      "name": "anhcape_architecture_viz.ipynb",
+      "filePath": "anhcape_architecture_viz.ipynb",
+      "summary": "Jupyter Notebook for visualizing the architecture and performance metrics of the ANHCape agent.",
+      "tags": [
+        "visualization",
+        "jupyter-notebook",
+        "architecture"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:anhcape_architecture.py",
+      "type": "file",
+      "name": "anhcape_architecture.py",
+      "filePath": "anhcape_architecture.py",
+      "summary": "Defines the core neural network architecture for the ANHCape agent, including actor and critic networks.",
+      "tags": [
+        "neural-network",
+        "architecture",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:anhcape_architecture.py:draw_box",
+      "type": "function",
+      "name": "draw_box",
+      "filePath": "anhcape_architecture.py",
+      "summary": "Function draw_box in anhcape_architecture.py.",
+      "tags": [
+        "function",
+        "component"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        11,
+        20
+      ]
+    },
+    {
+      "id": "function:anhcape_architecture.py:arrow",
+      "type": "function",
+      "name": "arrow",
+      "filePath": "anhcape_architecture.py",
+      "summary": "Function arrow in anhcape_architecture.py.",
+      "tags": [
+        "function",
+        "component"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        22,
+        27
+      ]
+    },
+    {
+      "id": "function:anhcape_architecture.py:draw_nn",
+      "type": "function",
+      "name": "draw_nn",
+      "filePath": "anhcape_architecture.py",
+      "summary": "Function draw_nn in anhcape_architecture.py.",
+      "tags": [
+        "function",
+        "component"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        116,
+        136
+      ]
+    },
+    {
+      "id": "document:CMakeLists.txt",
+      "type": "document",
+      "name": "CMakeLists.txt",
+      "filePath": "CMakeLists.txt",
+      "summary": "CMake build configuration for the anhc_agent project.",
+      "tags": [
+        "build-system",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:evaluation_notebook.ipynb",
+      "type": "file",
+      "name": "evaluation_notebook.ipynb",
+      "filePath": "evaluation_notebook.ipynb",
+      "summary": "Jupyter Notebook for evaluating the trained ANHCape agent's performance in simulation.",
+      "tags": [
+        "evaluation",
+        "jupyter-notebook",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:launch/test_anhcape.launch.py",
+      "type": "file",
+      "name": "test_anhcape.launch.py",
+      "filePath": "launch/test_anhcape.launch.py",
+      "summary": "ROS 2 launch file for running tests and evaluating the ANHCape agent.",
+      "tags": [
+        "launch-file",
+        "test",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:launch/test_anhcape.launch.py:generate_launch_description",
+      "type": "function",
+      "name": "generate_launch_description",
+      "filePath": "launch/test_anhcape.launch.py",
+      "summary": "Function generate_launch_description in test_anhcape.launch.py.",
+      "tags": [
+        "function",
+        "component"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        5,
+        29
+      ]
+    },
+    {
+      "id": "config:package.xml",
+      "type": "config",
+      "name": "package.xml",
+      "filePath": "package.xml",
+      "summary": "ROS 2 package configuration detailing dependencies and package metadata.",
+      "tags": [
+        "package-config",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "scripts/__init__.py",
+      "summary": "Initialization file for the scripts module.",
+      "tags": [
+        "entry-point",
+        "barrel"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/environment/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "scripts/environment/__init__.py",
+      "summary": "Initialization file for the environment module.",
+      "tags": [
+        "entry-point",
+        "barrel"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/environment/environment_interface.py",
+      "type": "file",
+      "name": "environment_interface.py",
+      "filePath": "scripts/environment/environment_interface.py",
+      "summary": "Abstract interface defining the required methods for RL environment wrappers.",
+      "tags": [
+        "interface",
+        "type-definition",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:scripts/environment/environment_interface.py:EnvInterface",
+      "type": "class",
+      "name": "EnvInterface",
+      "filePath": "scripts/environment/environment_interface.py",
+      "summary": "Class EnvInterface in environment_interface.py.",
+      "tags": [
+        "class",
+        "component"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        10,
+        95
+      ]
+    },
+    {
+      "id": "file:scripts/environment/environment.py",
+      "type": "file",
+      "name": "environment.py",
+      "filePath": "scripts/environment/environment.py",
+      "summary": "Implementation of the ROS 2 based reinforcement learning environment for the ANHCape agent.",
+      "tags": [
+        "environment",
+        "simulation",
+        "service"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/environment/environment.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/environment/environment.py",
+      "summary": "Function main in environment.py.",
+      "tags": [
+        "function",
+        "component"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        647,
+        662
+      ]
+    },
+    {
+      "id": "class:scripts/environment/environment.py:Environment",
+      "type": "class",
+      "name": "Environment",
+      "filePath": "scripts/environment/environment.py",
+      "summary": "Class Environment in environment.py.",
+      "tags": [
+        "class",
+        "component"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        46,
+        644
+      ]
+    },
+    {
+      "id": "file:scripts/policy/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "scripts/policy/__init__.py",
+      "summary": "Initialization file for the policy module.",
+      "tags": [
+        "entry-point",
+        "barrel"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/utils/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "scripts/utils/__init__.py",
+      "summary": "Initialization file for the utils module.",
+      "tags": [
+        "entry-point",
+        "barrel"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/utils/buffer.py",
+      "type": "file",
+      "name": "buffer.py",
+      "filePath": "scripts/utils/buffer.py",
+      "summary": "Implementation of replay buffers (e.g., PrioritizedReplayBuffer) for off-policy reinforcement learning.",
+      "tags": [
+        "utility",
+        "data-structure",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:scripts/utils/buffer.py:LAP",
+      "type": "class",
+      "name": "LAP",
+      "filePath": "scripts/utils/buffer.py",
+      "summary": "Class LAP in buffer.py.",
+      "tags": [
+        "class",
+        "component"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        5,
+        132
+      ]
+    },
+    {
+      "id": "file:scripts/utils/plot_reward.py",
+      "type": "file",
+      "name": "plot_reward.py",
+      "filePath": "scripts/utils/plot_reward.py",
+      "summary": "Utility script for plotting training rewards and performance metrics.",
+      "tags": [
+        "utility",
+        "visualization",
+        "script"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/utils/point_cloud2.py",
+      "type": "file",
+      "name": "point_cloud2.py",
+      "filePath": "scripts/utils/point_cloud2.py",
+      "summary": "Utility functions for working with ROS 2 PointCloud2 messages, converting to and from numpy arrays.",
+      "tags": [
+        "utility",
+        "data-processing",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/utils/point_cloud2.py:read_points",
+      "type": "function",
+      "name": "read_points",
+      "filePath": "scripts/utils/point_cloud2.py",
+      "summary": "Function read_points in point_cloud2.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        62,
+        122
+      ]
+    },
+    {
+      "id": "function:scripts/utils/point_cloud2.py:read_points_list",
+      "type": "function",
+      "name": "read_points_list",
+      "filePath": "scripts/utils/point_cloud2.py",
+      "summary": "Function read_points_list in point_cloud2.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        125,
+        149
+      ]
+    },
+    {
+      "id": "function:scripts/utils/point_cloud2.py:create_cloud",
+      "type": "function",
+      "name": "create_cloud",
+      "filePath": "scripts/utils/point_cloud2.py",
+      "summary": "Function create_cloud in point_cloud2.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        152,
+        187
+      ]
+    },
+    {
+      "id": "function:scripts/utils/point_cloud2.py:create_cloud_xyz32",
+      "type": "function",
+      "name": "create_cloud_xyz32",
+      "filePath": "scripts/utils/point_cloud2.py",
+      "summary": "Function create_cloud_xyz32 in point_cloud2.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        190,
+        206
+      ]
+    },
+    {
+      "id": "function:scripts/utils/point_cloud2.py:_get_struct_fmt",
+      "type": "function",
+      "name": "_get_struct_fmt",
+      "filePath": "scripts/utils/point_cloud2.py",
+      "summary": "Function _get_struct_fmt in point_cloud2.py.",
+      "tags": [
+        "function",
+        "utility"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        209,
+        230
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "function:scripts/policy/anhcape_agent.py:AvgL1Norm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "function:scripts/policy/anhcape_agent.py:AvgL1Norm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "function:scripts/policy/anhcape_agent.py:LAP_huber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "function:scripts/policy/anhcape_agent.py:LAP_huber",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "class:scripts/policy/anhcape_agent.py:AnhcapeActor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "class:scripts/policy/anhcape_agent.py:AnhcapeActor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "class:scripts/policy/anhcape_agent.py:AnhcapeEncoder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "class:scripts/policy/anhcape_agent.py:AnhcapeEncoder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "class:scripts/policy/anhcape_agent.py:AnhcapeCritic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "class:scripts/policy/anhcape_agent.py:AnhcapeCritic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "class:scripts/policy/anhcape_agent.py:AnhcapeAgent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "class:scripts/policy/anhcape_agent.py:AnhcapeAgent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/test_anhcape_agent.py",
+      "target": "function:scripts/policy/test_anhcape_agent.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/test_anhcape_agent.py",
+      "target": "function:scripts/policy/test_anhcape_agent.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/test_anhcape_agent.py",
+      "target": "class:scripts/policy/test_anhcape_agent.py:TestAnhcape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/test_anhcape_agent.py",
+      "target": "class:scripts/policy/test_anhcape_agent.py:TestAnhcape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/train_anhcape_agent.py",
+      "target": "function:scripts/policy/train_anhcape_agent.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/train_anhcape_agent.py",
+      "target": "function:scripts/policy/train_anhcape_agent.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/train_anhcape_agent.py",
+      "target": "class:scripts/policy/train_anhcape_agent.py:TrainAnhcape",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/policy/train_anhcape_agent.py",
+      "target": "class:scripts/policy/train_anhcape_agent.py:TrainAnhcape",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/policy/test_anhcape_agent.py",
+      "target": "file:scripts/policy/anhcape_agent.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/policy/anhcape_agent.py",
+      "target": "file:scripts/policy/test_anhcape_agent.py",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:scripts/policy/train_anhcape_agent.py",
+      "target": "file:scripts/policy/anhcape_agent.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/utils/file_manager.py",
+      "target": "function:scripts/utils/file_manager.py:save_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/file_manager.py",
+      "target": "function:scripts/utils/file_manager.py:save_json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/file_manager.py",
+      "target": "function:scripts/utils/file_manager.py:load_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/file_manager.py",
+      "target": "function:scripts/utils/file_manager.py:load_json",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/file_manager.py",
+      "target": "function:scripts/utils/file_manager.py:save_yaml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/file_manager.py",
+      "target": "function:scripts/utils/file_manager.py:save_yaml",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/file_manager.py",
+      "target": "function:scripts/utils/file_manager.py:load_yaml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/file_manager.py",
+      "target": "function:scripts/utils/file_manager.py:load_yaml",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_metrics.py",
+      "target": "file:scripts/utils/file_manager.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/utils/plot_metrics.py",
+      "target": "function:scripts/utils/plot_metrics.py:parse_args",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_metrics.py",
+      "target": "function:scripts/utils/plot_metrics.py:parse_args",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_metrics.py",
+      "target": "function:scripts/utils/plot_metrics.py:plot_metrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_metrics.py",
+      "target": "function:scripts/utils/plot_metrics.py:plot_metrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_metrics.py",
+      "target": "function:scripts/utils/plot_metrics.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_metrics.py",
+      "target": "function:scripts/utils/plot_metrics.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_metrics.py:plot_metrics",
+      "target": "function:scripts/utils/file_manager.py:load_yaml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_metrics.py:main",
+      "target": "function:scripts/utils/plot_metrics.py:parse_args",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_metrics.py:main",
+      "target": "function:scripts/utils/plot_metrics.py:plot_metrics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "file:scripts/utils/file_manager.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "class:scripts/utils/plot_trajectories_on_map.py:MapMetaData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "class:scripts/utils/plot_trajectories_on_map.py:MapMetaData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "class:scripts/utils/plot_trajectories_on_map.py:Trajectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "class:scripts/utils/plot_trajectories_on_map.py:Trajectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:transform_coordinates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:transform_coordinates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_image_and_metadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_image_and_metadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_trajectories",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_trajectories",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_metrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_metrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:display_metrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:display_metrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:plot_trajectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:plot_trajectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/plot_trajectories_on_map.py",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:load_image_and_metadata",
+      "target": "function:scripts/utils/file_manager.py:load_yaml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:load_trajectories",
+      "target": "function:scripts/utils/file_manager.py:load_yaml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:load_trajectories",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:transform_coordinates",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:load_metrics",
+      "target": "function:scripts/utils/file_manager.py:load_yaml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_image_and_metadata",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_trajectories",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:load_metrics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:plot_trajectory",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:display_metrics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:scripts/utils/plot_trajectories_on_map.py:main",
+      "target": "function:scripts/utils/plot_trajectories_on_map.py:plot_comparison",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:anhcape_architecture.py",
+      "target": "function:anhcape_architecture.py:draw_box",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:anhcape_architecture.py",
+      "target": "function:anhcape_architecture.py:draw_box",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:anhcape_architecture.py",
+      "target": "function:anhcape_architecture.py:arrow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:anhcape_architecture.py",
+      "target": "function:anhcape_architecture.py:arrow",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:anhcape_architecture.py",
+      "target": "function:anhcape_architecture.py:draw_nn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:anhcape_architecture.py",
+      "target": "function:anhcape_architecture.py:draw_nn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:launch/test_anhcape.launch.py",
+      "target": "function:launch/test_anhcape.launch.py:generate_launch_description",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:launch/test_anhcape.launch.py",
+      "target": "function:launch/test_anhcape.launch.py:generate_launch_description",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/environment/environment_interface.py",
+      "target": "class:scripts/environment/environment_interface.py:EnvInterface",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/environment/environment_interface.py",
+      "target": "class:scripts/environment/environment_interface.py:EnvInterface",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/environment/environment.py",
+      "target": "function:scripts/environment/environment.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/environment/environment.py",
+      "target": "function:scripts/environment/environment.py:main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/environment/environment.py",
+      "target": "class:scripts/environment/environment.py:Environment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/environment/environment.py",
+      "target": "class:scripts/environment/environment.py:Environment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/buffer.py",
+      "target": "class:scripts/utils/buffer.py:LAP",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/buffer.py",
+      "target": "class:scripts/utils/buffer.py:LAP",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:read_points",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:read_points",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:read_points_list",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:read_points_list",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:create_cloud",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:create_cloud",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:create_cloud_xyz32",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:create_cloud_xyz32",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:_get_struct_fmt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/utils/point_cloud2.py",
+      "target": "function:scripts/utils/point_cloud2.py:_get_struct_fmt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "document:CMakeLists.txt",
+      "target": "config:package.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.xml",
+      "target": "document:CMakeLists.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:anhcape_architecture_viz.ipynb",
+      "target": "file:anhcape_architecture.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:evaluation_notebook.ipynb",
+      "target": "file:scripts/environment/environment.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:evaluation_notebook.ipynb",
+      "target": "file:anhcape_architecture.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:launch/test_anhcape.launch.py",
+      "target": "file:scripts/environment/environment.py",
+      "type": "triggers",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:policy",
+      "name": "Policy Layer",
+      "description": "Deep reinforcement learning agent implementations, policy definitions, and training/testing scripts.",
+      "nodeIds": [
+        "file:scripts/policy/anhcape_agent.py",
+        "file:scripts/policy/test_anhcape_agent.py",
+        "file:scripts/policy/train_anhcape_agent.py",
+        "file:scripts/policy/__init__.py"
+      ]
+    },
+    {
+      "id": "layer:environment",
+      "name": "Environment Layer",
+      "description": "ROS 2 environment interfaces and interaction logic for the DRL agent.",
+      "nodeIds": [
+        "file:scripts/environment/__init__.py",
+        "file:scripts/environment/environment_interface.py",
+        "file:scripts/environment/environment.py"
+      ]
+    },
+    {
+      "id": "layer:utility",
+      "name": "Utility Layer",
+      "description": "Helper scripts for plotting, metrics calculation, data buffers, and architecture visualization.",
+      "nodeIds": [
+        "file:scripts/utils/file_manager.py",
+        "file:scripts/utils/plot_metrics.py",
+        "file:scripts/utils/plot_trajectories_on_map.py",
+        "file:scripts/utils/buffer.py",
+        "file:scripts/utils/plot_reward.py",
+        "file:scripts/utils/point_cloud2.py",
+        "file:scripts/utils/__init__.py",
+        "file:scripts/__init__.py",
+        "file:evaluation_notebook.ipynb",
+        "file:anhcape_architecture_viz.ipynb",
+        "file:anhcape_architecture.py"
+      ]
+    },
+    {
+      "id": "layer:config",
+      "name": "Configuration Layer",
+      "description": "Hyperparameters, environment settings, and ROS 2 package configuration files.",
+      "nodeIds": [
+        "config:config/environment.yaml",
+        "config:config/hyperparameters.yaml",
+        "config:config/test_config.yaml",
+        "config:config/train_config.yaml",
+        "config:.understand-anything/.understandignore",
+        "document:CMakeLists.txt",
+        "config:package.xml"
+      ]
+    },
+    {
+      "id": "layer:launch",
+      "name": "Launch Layer",
+      "description": "ROS 2 launch files serving as entry points to start the agent and related nodes.",
+      "nodeIds": [
+        "file:launch/test_anhcape.launch.py"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Training Entry Point",
+      "description": "Start here to see how the ANHCAPE agent is initialized and trained within the ROS 2 ecosystem. This script bridges the deep reinforcement learning loop with ROS 2 execution, acting as the main entry point for policy optimization.",
+      "nodeIds": [
+        "file:scripts/policy/train_anhcape_agent.py"
+      ],
+      "languageLesson": "In ROS 2, nodes use an executor to process callbacks. Deep reinforcement learning scripts often run the training loop in a separate thread to avoid blocking ROS 2 communication."
+    },
+    {
+      "order": 2,
+      "title": "Configuration Layer",
+      "description": "Before diving into the policy, it's essential to understand the configurations that govern it. These YAML files specify the machine learning hyperparameters, environment thresholds, and training setup that the entry point script loads.",
+      "nodeIds": [
+        "config:config/train_config.yaml",
+        "config:config/environment.yaml",
+        "config:config/hyperparameters.yaml"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Core DRL Agent",
+      "description": "This is the core implementation of the ANHCAPE agent, based on TD3. Here you will find the Adaptive Exploration decay, Q-value clipping, and the Dual Encoder system as mentioned in the project overview.",
+      "nodeIds": [
+        "file:scripts/policy/anhcape_agent.py",
+        "file:anhcape_architecture.py"
+      ],
+      "languageLesson": "PyTorch neural networks define their architecture in the `__init__` method and the forward pass in `forward()`. Separating the architecture definition from the reinforcement learning logic keeps the codebase modular."
+    },
+    {
+      "order": 4,
+      "title": "Environment Interaction",
+      "description": "For the agent to learn, it must interact with Gazebo. These scripts implement the ROS 2 environment wrappers, translating ROS messages into state representations and RL actions into ROS velocity commands.",
+      "nodeIds": [
+        "file:scripts/environment/environment_interface.py",
+        "file:scripts/environment/environment.py"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "State and Memory Utilities",
+      "description": "Off-policy algorithms rely on experience replay. The buffer script handles storing and sampling transitions, while the point cloud utilities transform raw LiDAR data into the appropriate state arrays for the Dual Encoder system.",
+      "nodeIds": [
+        "file:scripts/utils/buffer.py",
+        "file:scripts/utils/point_cloud2.py"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Testing and Evaluation",
+      "description": "Once trained, the agent is tested using these evaluation scripts and launch files. They load the best checkpoints and run the agent through predefined start-goal pairs to assess navigation performance in simulation.",
+      "nodeIds": [
+        "file:scripts/policy/test_anhcape_agent.py",
+        "file:launch/test_anhcape.launch.py",
+        "config:config/test_config.yaml",
+        "file:evaluation_notebook.ipynb"
+      ],
+      "languageLesson": "ROS 2 Launch files in Python offer a programmatic way to start multiple nodes, set parameters, and remap topics, providing much more flexibility than the older XML-based launch format."
+    },
+    {
+      "order": 7,
+      "title": "Analysis and Visualization",
+      "description": "The final piece of the architecture involves analyzing results. These utilities and Jupyter notebooks visualize the training metrics, explore neural network structures, and overlay robot trajectories on the simulation map.",
+      "nodeIds": [
+        "file:anhcape_architecture_viz.ipynb",
+        "file:scripts/utils/plot_trajectories_on_map.py",
+        "file:scripts/utils/plot_metrics.py",
+        "file:scripts/utils/plot_reward.py"
+      ]
+    }
+  ]
+}

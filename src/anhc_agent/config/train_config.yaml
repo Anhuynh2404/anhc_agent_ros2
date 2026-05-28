@@ -1,0 +1,27 @@
+train_settings:
+  seed: 40
+  use_checkpoints: true
+  timesteps_before_training: 25000
+  eval_freq: 5000
+  eval_eps: 10
+  max_timesteps: 5000000
+  max_episode_steps: 500
+  base_file_name: "anhcape_agent"
+
+  # ─── CHẾ ĐỘ TRAINING ───────────────────────────────────────────────────────
+  #
+  #  TRAIN MỚI TỪ ĐẦU:
+  #    load_model: false
+  #    save_date: ""        ← để trống → tự tạo timestamp mới
+  #
+  #  RESUME (tiếp tục sau khi bị ngắt):
+  #    load_model: true
+  #    save_date: ""        ← để trống → tự động tìm checkpoint mới nhất
+  #
+  #  RESUME PHIÊN CỤ THỂ:
+  #    load_model: true
+  #    save_date: "20260527_112030"   ← nhập đúng timestamp của phiên đó
+  # ───────────────────────────────────────────────────────────────────────────
+
+  load_model: true   # ← false = TRAIN MỚI | true = RESUME
+  save_date: ""       # ← để trống khi train mới hoặc resume tự động

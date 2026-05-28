@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="training_env">
+    <!--
+      Environment designed in Blender 5.1.0, exported as OBJ (Y-up axis).
+      Gazebo uses Z-up axis.
+
+      Rotation math (roll = +PI/2 = +1.5708):
+        z_gazebo = y_obj   → floor (y_obj=0) stays at z=0, walls (y_obj=3) rise to z=3 ✓
+        y_gazebo = -z_obj  → depth axis flipped
+
+      Environment bounding box (Gazebo frame):
+        X: -12.5 m  to  12.8 m
+        Y: -10.0 m  to  13.0 m
+        Z:   0.0 m  to   3.0 m  (wall height)
+
+      Robot spawns at (0, 0, 0) — inside the environment.
+    -->
+    <static>true</static>
+
+    <link name="training_env_link">
+      <!--
+        IMPORTANT: pose on <link> rotates BOTH visual and collision together.
+        roll=+1.5708 (+90°) converts Blender Y-up → Gazebo Z-up.
+        DO NOT use negative (-1.5708) — that sends walls underground.
+      -->
+      <pose>0 0 0 1.5708 0 0</pose>
+
+      <!-- Visual mesh -->
+      <visual name="training_env_visual">
+        <geometry>
+          <mesh>
+            <uri>model://training_env/training_env.obj</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.8 0.716 0.453 1</ambient>
+          <diffuse>0.8 0.716 0.453 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+        </material>
+      </visual>
+
+      <!-- Collision mesh — walls are solid, robot cannot pass through -->
+      <collision name="training_env_collision">
+        <geometry>
+          <mesh>
+            <uri>model://training_env/training_env.obj</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e6</kp>
+              <kd>100</kd>
+              <max_vel>1.0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+    </link>
+  </model>
+</sdf>

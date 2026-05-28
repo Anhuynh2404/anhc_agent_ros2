@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+  <!-- =====================
+       HARD OUTER BOUNDS
+       ===================== -->
+  <obstacle x1="-12.5" y1="13.0" x2="12.8" y2="13.0" />
+  <obstacle x1="-12.5" y1="-10.0" x2="12.8" y2="-10.0" />
+  <obstacle x1="-12.5" y1="-10.0" x2="-12.5" y2="13.0" />
+  <obstacle x1="12.8" y1="-10.0" x2="12.8" y2="13.0" />
+
+  <!-- =====================
+       INNER SAFETY FENCE
+       ===================== -->
+  <obstacle x1="-10.2" y1="10.8" x2="10.2" y2="10.8" />
+  <obstacle x1="-10.2" y1="-7.8" x2="10.2" y2="-7.8" />
+  <obstacle x1="-10.2" y1="-7.8" x2="-10.2" y2="10.8" />
+  <obstacle x1="10.2" y1="-7.8" x2="10.2" y2="10.8" />
+
+  <!-- =====================
+       INTERNAL GUIDE WALLS
+       ===================== -->
+  <obstacle x1="-9.2" y1="6.0" x2="9.2" y2="6.0" />
+  <!-- <obstacle x1="-9.2" y1="-2.8" x2="9.2" y2="-2.8" /> -->
+  <obstacle x1="-7.6" y1="-1.8" x2="-7.6" y2="5.0" />
+  <obstacle x1="7.6" y1="-1.8" x2="7.6" y2="5.0" />
+
+  <obstacle x1="2.57666" y1="-4.92152" x2="2.57666" y2="-0.346429" />
+  <!-- =====================
+       DISTRIBUTED MIDDLE WAYPOINTS
+       (spread pedestrians across the map instead of clustering at center)
+       ===================== -->
+  <waypoint id="MID_N" x=" 3.7" y=" 1.0" r="1.2"/>
+  <waypoint id="MID_E" x="-5.03" y="-2.96" r="1.2"/>
+  <waypoint id="MID_S" x="-9.76" y="0.84" r="1.2"/>
+  <waypoint id="MID_W" x="-2.4" y="4.0" r="1.2"/>
+  <waypoint id="MID_C" x=" 0.0" y=" 1.0" r="1.0"/>
+
+  <!-- =====================
+       LANE WAYPOINTS
+       ===================== -->
+  <waypoint id="N_W" x="-7.8" y="8.8" r="0.8"/>
+  <waypoint id="N_C" x=" 0.0" y="8.6" r="0.8"/>
+  <waypoint id="N_E" x=" 7.8" y="8.8" r="0.8"/>
+
+  <waypoint id="C_W" x="-6.6" y="1.6" r="0.8"/>
+  <waypoint id="C_C" x=" 0.0" y="1.8" r="0.8"/>
+  <waypoint id="C_E" x=" 6.6" y="1.6" r="0.8"/>
+
+  <waypoint id="S_W" x="-7.8" y="-5.8" r="0.8"/>
+  <waypoint id="S_C" x=" 0.0" y="-5.6" r="0.8"/>
+  <waypoint id="S_E" x=" 7.8" y="-5.8" r="0.8"/>
+
+  <waypoint id="X_N" x="-2.0" y="4.2" r="0.7"/>
+  <waypoint id="X_S" x=" 2.0" y="-0.8" r="0.7"/>
+
+  <waypoint id="N_ST" x="11.0573" y="4.27418" r="0.8"/>
+  <waypoint id="N_SE" x="10.97" y="3.6" r="0.8"/>
+  <waypoint id="N_E" x="10.97" y="-5.442" r="0.8"/>
+  
+  <waypoint id="N_A" x="10.949" y="6.9209" r="0.8"/>
+  <waypoint id="N_B" x="10.3933" y="11.6044" r="0.8"/>
+  <waypoint id="N_C" x="6.27239" y="11.5505" r="0.8"/>
+  <waypoint id="N_D" x="5.7994" y="6.4299" r="0.8"/>
+
+  
+  <waypoint id="M_A" x="-4.1873" y="-4.4086" r="0.8"/>
+  <waypoint id="M_B" x="-5.9520" y="-0.1364" r="0.8"/>
+
+  <!-- Waypoints cho người đi qua lại theo trục Bắc-Nam phía Tây -->
+  <!-- Tường ngang y=-2.8 đã được xóa, người đi bộ có thể đi thẳng giữa 2 điểm -->
+  <waypoint id="W_NORTH" x="-6.92436" y="3.95778" r="0.6"/>
+  <waypoint id="W_SOUTH" x="-6.95198" y="-4.10538" r="0.6"/>
+
+
+
+  <!-- =====================
+       AGENTS
+       Goal: increase center density
+       ===================== -->
+
+  <!-- Ngươi di qua lai tren cung-->
+  <!-- <agent x="10.62" y="-3.88" n="1" dx="0.5" dy="0.5" type="0">
+    <addwaypoint id="N_ST"/>
+    <addwaypoint id="N_SE"/>
+    <addwaypoint id="N_E"/>
+    <addwaypoint id="N_E"/>
+  </agent> -->
+
+  <agent x="10.949" y="6.9209" n="1" dx="0.5" dy="0.5" type="0">
+    <addwaypoint id="N_A"/>
+    <addwaypoint id="N_B"/>
+    <addwaypoint id="N_C"/>
+  </agent>
+
+  <!-- Spread-out middle circulation -->
+  <!-- <agent x="-2.0" y="2.0" n="1" dx="1.2" dy="0.9" type="0">
+    <addwaypoint id="MID_N"/>
+    <addwaypoint id="MID_E"/>
+    <addwaypoint id="MID_C"/>
+    <addwaypoint id="MID_W"/>
+  </agent> -->
+
+  <agent x="5.8" y="1.6" n="1" dx="1.0" dy="0.8" type="0">
+    <addwaypoint id="MID_C"/>
+    <addwaypoint id="MID_W"/>
+  </agent>
+
+  <!-- Người đi qua lại thẳng giữa 2 điểm (qua khe hở tường tại x≈-6.95) -->
+  <agent x="-6.95198" y="-4.10538" n="1" dx="0.1" dy="0.1" type="0">
+    <addwaypoint id="W_SOUTH"/>
+    <addwaypoint id="W_NORTH"/>
+  </agent>
+
+</scenario>

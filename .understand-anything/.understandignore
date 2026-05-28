@@ -1,0 +1,62 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Lines below are suggestions — uncomment to activate.
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+# --- From .gitignore (uncomment to exclude) ---
+
+# devel/
+# logs/
+# log/
+# install/
+# bin/
+# lib/
+# msg_gen/
+# srv_gen/
+# msg/*Action.msg
+# msg/*ActionFeedback.msg
+# msg/*ActionGoal.msg
+# msg/*ActionResult.msg
+# msg/*Feedback.msg
+# msg/*Goal.msg
+# msg/*Result.msg
+# msg/_*.py
+# build_isolated/
+# devel_isolated/
+# *.cfgc
+# /cfg/cpp/
+# /cfg/*.py
+# *.dox
+# *.wikidoc
+# .project
+# .cproject
+# CMakeLists.txt.user
+# srv/_*.py
+# *.pcd
+# *.pyc
+# qtcreator-*
+# *.user
+# /planning/cfg
+# /planning/docs
+# /planning/src
+# *~
+# .#*
+# CATKIN_IGNORE
+# temp/
+# test_runs/
+# maps/
+test_td3_agent.py
+test_td3.launch.py
+
+# --- Detected directories (uncomment to exclude) ---
+
+# docs/
+
+# --- Test file patterns (uncomment to exclude) ---
+
+# *.test.*
+# *.spec.*
+# *.snap
