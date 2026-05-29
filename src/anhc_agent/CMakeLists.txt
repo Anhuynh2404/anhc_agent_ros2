@@ -40,7 +40,11 @@ install(
     scripts/policy/anhcape_agent.py
     scripts/policy/train_anhcape_agent.py
     scripts/policy/test_anhcape_agent.py
+    # TD3 Baseline
+    scripts/policy/td3_agent.py
+    scripts/policy/train_td3_agent.py
     scripts/utils/buffer.py
+    scripts/utils/td3_uniform_buffer.py
     scripts/utils/point_cloud2.py
     scripts/utils/file_manager.py
     scripts/environment/environment_interface.py

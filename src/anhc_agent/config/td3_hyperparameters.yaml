@@ -1,0 +1,37 @@
+hyperparameters:
+  # ────────────────────────────────────────────────────────────────────────
+  # Standard TD3 Hyperparameters
+  # Tham chiếu: Fujimoto et al., "Addressing Function Approximation Error
+  # in Actor-Critic Methods", ICML 2018.
+  # ────────────────────────────────────────────────────────────────────────
+
+  # Generic
+  batch_size: 256
+  buffer_size: 1000000
+  discount: 0.99
+
+  # ── Polyak averaging (soft target update) ────────────────────────────────
+  # τ = 0.005 là giá trị chuẩn trong paper TD3 gốc.
+  # (AnhcApe dùng hard update mỗi target_update_rate bước — khác nhau ở đây)
+  tau: 0.005
+
+  # ── Delayed Policy Update ─────────────────────────────────────────────────
+  # Actor cập nhật mỗi policy_freq bước critic (paper dùng 2).
+  policy_freq: 2
+
+  # ── Exploration noise (decaying Gaussian) ────────────────────────────────
+  exploration_noise: 1.0
+  exploration_noise_min: 0.1
+  exploration_noise_decay_steps: 750000
+
+  # ── Target Policy Smoothing ───────────────────────────────────────────────
+  # Thêm clipped Gaussian noise vào target action để smooth Q-value target.
+  target_policy_noise: 0.2
+  noise_clip: 0.5
+
+  # ── Network Architecture ─────────────────────────────────────────────────
+  # Cả Actor và Critic dùng chung hidden_dim = 256.
+  # Đây là kiến trúc chuẩn trong paper gốc TD3.
+  hidden_dim: 256
+  actor_lr: 0.0003
+  critic_lr: 0.0003
