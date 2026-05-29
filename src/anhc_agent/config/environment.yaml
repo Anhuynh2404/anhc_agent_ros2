@@ -16,3 +16,5 @@ threshold_parameters:
   time_delta: 0.1
   inter_entity_distance: 1.5
   lidar_max_range: 10
+  max_spawn_attempts: 10
+  spawn_safety_margin: 0.15

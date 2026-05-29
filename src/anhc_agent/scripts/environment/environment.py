@@ -115,6 +115,12 @@ class Environment(Node):
         ]
 
         self.lidar_max_range = self.threshold_params_config["lidar_max_range"]
+        self.max_spawn_attempts = self.threshold_params_config.get(
+            "max_spawn_attempts", 10
+        )
+        self.spawn_safety_margin = self.threshold_params_config.get(
+            "spawn_safety_margin", 0.15
+        )
 
         # Callback groups for handling sensors and services in parallel
         self.odom_callback_group = MutuallyExclusiveCallbackGroup()
@@ -409,11 +415,22 @@ class Environment(Node):
         return response
 
     def reset_callback(self, _, response):
-        """Resets the state of the environment and returns an initial observation, state"""
+        """Resets the state of the environment and returns an initial observation, state.
+
+        Uses lidar-based post-spawn collision detection instead of hardcoded dead zones.
+        After teleporting the robot to a candidate position, physics is propagated to
+        obtain a fresh lidar scan. If min_laser < (collision_threshold + safety_margin),
+        the position is rejected and a new candidate is tried.
+        """
 
         """*****************************************************
-		** Start by reseting the world
+		** Stop robot and reset world
 		*****************************************************"""
+        # Zero velocity to prevent momentum carryover from previous episode
+        self.velocity_command.linear.x = 0.0
+        self.velocity_command.angular.z = 0.0
+        self.velocity_publisher.publish(self.velocity_command)
+
         while not self.reset_proxy.wait_for_service(timeout_sec=1.0):
             self.get_logger().info(
                 "Service /reset_world not available, waiting again..."
@@ -426,15 +443,48 @@ class Environment(Node):
         time.sleep(self.time_delta)
 
         """*****************************************************
-		** Determine start positions for the agent
+		** Change goal position
 		*****************************************************"""
+        self.change_goal()
+
+        """*****************************************************
+		** Spawn robot with post-spawn lidar collision check
+		*****************************************************"""
+        safe_threshold = self.collision_threshold + self.spawn_safety_margin
+
         if self.train_mode:
-            position_ok = False
-            angle = np.random.uniform(-np.pi, np.pi)
-            while not position_ok:
+            spawn_ok = False
+            for attempt in range(self.max_spawn_attempts):
                 start_x = np.random.uniform(self.lower, self.upper)
                 start_y = np.random.uniform(self.lower, self.upper)
-                position_ok = not self.check_dead_zone(start_x, start_y)
+                angle = np.random.uniform(-np.pi, np.pi)
+
+                # Teleport robot to candidate position
+                self._teleport_agent(start_x, start_y, angle)
+
+                # Propagate physics to settle robot + refresh lidar scan
+                self.propagate_state(2 * self.time_delta)
+
+                # Validate spawn: check lidar for nearby obstacles
+                environment_state = self.get_environment_state()
+                min_laser = min(environment_state)
+
+                if min_laser >= safe_threshold:
+                    spawn_ok = True
+                    break
+
+                self.get_logger().warning(
+                    f"Spawn attempt {attempt + 1}/{self.max_spawn_attempts}: "
+                    f"collision risk at ({start_x:.2f}, {start_y:.2f}) "
+                    f"(min_laser={min_laser:.3f} < {safe_threshold:.3f}), "
+                    f"re-spawning..."
+                )
+
+            if not spawn_ok:
+                self.get_logger().error(
+                    f"Could not find safe spawn after {self.max_spawn_attempts} "
+                    f"attempts. Using last position (min_laser={min_laser:.3f})"
+                )
         else:
             if not self.start_goal_pairs:
                 self.get_logger().info(f"{'All start-goal pairs are visited':-^50}")
@@ -443,29 +493,16 @@ class Environment(Node):
             start_x = self.current_pairs["start"]["x"]
             start_y = self.current_pairs["start"]["y"]
             angle = self.current_pairs["start"]["theta"]
-
-        quaternion = Quaternion.from_euler(0.0, 0.0, angle)
-        self.set_agent_state.pose.position.x = start_x
-        self.set_agent_state.pose.position.y = start_y
-        self.set_agent_state.pose.position.z = 0.0
-        self.set_agent_state.pose.orientation.x = quaternion.x
-        self.set_agent_state.pose.orientation.y = quaternion.y
-        self.set_agent_state.pose.orientation.z = quaternion.z
-        self.set_agent_state.pose.orientation.w = quaternion.w
-
-        self.set_agent_state_req.state = self.set_agent_state
-        # Set agent state
-        self.set_gazebo_model_state(self.set_agent_state_req)
+            self._teleport_agent(start_x, start_y, angle)
 
         """*****************************************************
-		** Change goal and randomize obstacles
+		** Randomize obstacles and finalize
 		*****************************************************"""
-        self.change_goal()
         if self.train_mode:
             self.shuffle_obstacles(start_x, start_y)
         # Publish markers for rviz
         self.publish_markers([0.0, 0.0])
-        # Propagate state for 2*time_delta seconds
+        # Final propagation to settle after obstacle placement
         self.propagate_state(2 * self.time_delta)
 
         """*****************************************************
@@ -479,6 +516,26 @@ class Environment(Node):
         self.prev_distance_to_goal = agent_state[0]
 
         return response
+
+    def _teleport_agent(self, x, y, angle):
+        """Teleport the robot to (x, y) with the given heading angle."""
+        quaternion = Quaternion.from_euler(0.0, 0.0, angle)
+        self.set_agent_state.pose.position.x = x
+        self.set_agent_state.pose.position.y = y
+        self.set_agent_state.pose.position.z = 0.0
+        self.set_agent_state.pose.orientation.x = quaternion.x
+        self.set_agent_state.pose.orientation.y = quaternion.y
+        self.set_agent_state.pose.orientation.z = quaternion.z
+        self.set_agent_state.pose.orientation.w = quaternion.w
+        # Zero out any residual velocity
+        self.set_agent_state.twist.linear.x = 0.0
+        self.set_agent_state.twist.linear.y = 0.0
+        self.set_agent_state.twist.linear.z = 0.0
+        self.set_agent_state.twist.angular.x = 0.0
+        self.set_agent_state.twist.angular.y = 0.0
+        self.set_agent_state.twist.angular.z = 0.0
+        self.set_agent_state_req.state = self.set_agent_state
+        self.set_gazebo_model_state(self.set_agent_state_req)
 
     def change_goal(self):
         """Places a new goal and ensures its location is not on one of the obstacles"""
@@ -540,15 +597,49 @@ class Environment(Node):
             prev_obstacle_positions.append((x, y))
 
     def check_dead_zone(self, x, y):
-        """Check if (x, y) is in occupied space"""
-        dead_zone = False
+        """Check if (x, y) is inside occupied space in the training_env map.
+
+        Uses bounding boxes extracted from the training_env Blender mesh
+        (training_env.obj). Each box is expanded by collision_threshold to
+        ensure goals/obstacles are not placed too close to walls.
+
+        NOTE: These coordinates are specific to the training_env map.
+        If you switch to a different map, update the _WALL_BOXES list.
+        """
+        # Out of bounds check
         if abs(x) > self.upper or abs(y) > self.upper:
-            dead_zone = True
-        elif 2.0 < abs(x) < self.upper and abs(y) < 1.0:
-            dead_zone = True
-        elif abs(x) < 1.0 and 2.0 < abs(y) < self.upper:
-            dead_zone = True
-        return dead_zone
+            return True
+
+        # Bounding boxes (x_min, x_max, y_min, y_max) for walls, pillars,
+        # and structures in the training_env map (Gazebo frame coordinates).
+        _WALL_BOXES = [
+            # ── Horizontal walls ──────────────────────────────────
+            (-15.0, 10.0, -5.3, -5.0),     # Long bottom wall
+            (0.8, 4.5, 4.9, 5.2),          # Top-center horizontal wall
+            (6.5, 10.2, 4.9, 5.2),         # Top-right horizontal wall
+
+            # ── Vertical walls ────────────────────────────────────
+            (-2.6, -2.3, -5.3, -0.4),      # Left-center vertical wall
+            (0.8, 1.1, 2.1, 8.3),          # Center-right vertical wall
+            (4.2, 4.5, 4.9, 13.2),         # Far-right vertical wall
+
+            # ── Pillars / Columns ─────────────────────────────────
+            (-5.8, -4.7, 1.7, 2.7),        # Top-left pillar
+            (-3.4, -2.3, 4.7, 5.8),        # Top-center pillar
+            (1.5, 2.6, -3.8, -2.7),        # Bottom-center pillar
+            (4.9, 6.0, 2.5, 3.6),          # Right pillar
+
+            # ── Box / Structure ───────────────────────────────────
+            (4.3, 6.4, -1.0, 1.0),         # Mid-right box structure
+        ]
+
+        m = self.collision_threshold  # safety margin
+        for (xmin, xmax, ymin, ymax) in _WALL_BOXES:
+            if (xmin - m) <= x <= (xmax + m) and \
+               (ymin - m) <= y <= (ymax + m):
+                return True
+
+        return False
 
     def publish_markers(self, action):
         """Publishes visual data for Rviz to visualize the goal and the robot's actions"""
